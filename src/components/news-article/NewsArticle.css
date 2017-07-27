@@ -1,0 +1,35 @@
+.news-article {
+    display: flex;
+}
+
+.news-article_image {
+    margin: auto;
+}
+
+.news-article_image img {
+    width: 13em;
+}
+
+.news-article_details_link {
+    margin-top: .5em;
+}
+
+.news-article_details {
+    width: 33em;
+    margin: 1em;
+}
+
+
+.news-article_details_header {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-article_details_header_title {
+    font-weight: bold;
+}
+
+.news-article_details_description {
+    text-align: left;
+}
+

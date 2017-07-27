@@ -1,0 +1,34 @@
+{
+    "status": "ok",
+    "source": "techcrunch",
+    "sortBy": "top",
+    "articles": [{
+        "author": "Sarah Perez",
+        "title": "YouTube TV triples its footprint with launches in 10 more U.S. markets",
+        "description": "YouTube TV, Google's entry in the crowded market of live TV streaming services, is now available in ten more U.S. metros, the company announced this morning...",
+        "url": "https://techcrunch.com/2017/07/20/youtube-tv-triples-its-footprint-with-launches-in-10-more-u-s-markets/",
+        "urlToImage": "https://tctechcrunch2011.files.wordpress.com/2017/02/youtube-unplugged.png?w=764&h=400&crop=1",
+        "publishedAt": "2017-07-20T17:00:52Z"
+    }, {
+        "author": "Darrell Etherington",
+        "title": "Elon Musk says he has ‘verbal’ okay to build multi-state underground Hyperloop",
+        "description": "Elon Musk said on Twitter that he received \"verbal government approval\" to build an underground Hyperloop transit network connecting New York, Philadelphia,..",
+        "url": "https://techcrunch.com/2017/07/20/elon-musk-says-he-has-verbal-okay-to-build-multi-state-underground-hyperloop/",
+        "urlToImage": "https://tctechcrunch2011.files.wordpress.com/2017/04/elevator-boring-company.gif?w=640&h=360&crop=1",
+        "publishedAt": "2017-07-20T15:19:18Z"
+    }, {
+        "author": "Alex Wilhelm",
+        "title": "Tech’s 5 biggest players now worth $3 trillion",
+        "description": "Tech’s most valuable players today crossed the $3 trillion aggregate market cap mark according to Google Finance data. It’s a feat that marks a new..",
+        "url": "https://techcrunch.com/2017/07/19/techs-5-biggest-players-now-worth-3-trillion/",
+        "urlToImage": "https://tctechcrunch2011.files.wordpress.com/2017/07/1percentclub_blue_tw-2.jpg?w=764&h=400&crop=1",
+        "publishedAt": "2017-07-19T23:04:52Z"
+    }, {
+        "author": "Jonathan Shieber",
+        "title": "Billionaires make it rain on Plenty, the indoor farming startup",
+        "description": "SoftBank Vision Fund, the huge tech-investmenAt vehicle helmed by Japanese billionaire Masayoshi Son, has led a $200 million investment into indoor farming..",
+        "url": "https://techcrunch.com/2017/07/19/billionaires-make-it-rain-on-plenty-the-indoor-farming-startup/",
+        "urlToImage": "https://tctechcrunch2011.files.wordpress.com/2017/07/4625.jpg?w=764&h=400&crop=1",
+        "publishedAt": "2017-07-19T20:49:29Z"
+    }]
+}
