@@ -1,9 +1,9 @@
 const REQUEST_OPTIONS_GET =  {
     headers: {
-        Accept: 'application/json, text/plain, */*',
         'Content-Type': 'application/json',
-        method: 'get',
     },
+    method: 'GET',
+    mode: 'cors',
 };
 
 const makeRequest = (requestOptions) => (url) => {

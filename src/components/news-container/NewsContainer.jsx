@@ -2,12 +2,12 @@ import React from 'react';
 import NewsArticleItemList from '../news-article-item-list/NewsArticleItemList';
 import { loadNewsArticles, } from '../../redux/actions/NewsActions';
 import './NewsContainer.css';
-
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state) => {
     return {
-        articles: state.articles,
+        articles: state.news.articles,
     }
 };
 
@@ -19,7 +19,7 @@ const mapDispatchToProps = dispatch => {
     }
 };
 
-class NewsContainer extends React.PureComponent {
+class NewsContainer extends React.Component {
 
     componentDidMount() {
         this.props.onLoadArticles();
@@ -32,4 +32,4 @@ class NewsContainer extends React.PureComponent {
     }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(NewsContainer);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(NewsContainer));

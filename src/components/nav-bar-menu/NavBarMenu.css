@@ -1,0 +1,25 @@
+.nav-bar-menu .menu {
+    background: #969797;
+    padding: 1px;
+}
+
+.nav-bar-menu .menu-list {
+    list-style: none;
+    display: flex;
+    margin: 0.5em 0 0.5em 0;
+}
+
+.nav-bar-menu .menu-list .menu-list-item {
+    width: 10em;
+    background: #edf0f0;
+    padding: .5em;
+    font-weight: bold;
+    text-align: center;
+    margin-right: 1em;
+    cursor: pointer;
+}
+.nav-bar-menu .menu-list .menu-list-item:hover,
+.nav-bar-menu .menu-list .menu-list-item.--selected {
+    background: #626464;
+    color:#ffffff;
+}

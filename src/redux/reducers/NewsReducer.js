@@ -5,26 +5,27 @@ const INITIAL_STATE = {
     searchTerm: '',
     showLastWeek: false,
     allArticles: [],
+    sources: [],
 
 };
 
-const reducer = (state = INITIAL_STATE, action) => {
+const newsReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case NEWS_ACTION_ENUM.LOAD_NEWS_ARTICLES_SUCCESS:
             return loadNewsArticlesSuccess(action, state);
-            break;
         case NEWS_ACTION_ENUM.LOAD_NEWS_ARTICLES_FAILURE:
             return loadNewsArticlesFailure(action, state);
-            break;
+        case NEWS_ACTION_ENUM.LOAD_NEWS_SOURCES_SUCCESS:
+            return loadNewsSourcesSuccess(action, state);
+        case NEWS_ACTION_ENUM.LOAD_NEWS_SOURCES_FAILURE:
+            return loadNewsSourcesFailure(action, state);
         case NEWS_ACTION_ENUM.SEARCH_NEWS_ARTICLES:
             return searchNewsArticles(action, state);
-            break;
         case NEWS_ACTION_ENUM.CLEAR_NEWS_SEARCH:
             return clearNewsSearch(state);
-            break;
+        default:
+            return state;
     }
-
-    return state;
 };
 
 /**
@@ -42,20 +43,27 @@ const searchNewsArticles = (action, state) => {
  * When not searching then just return all the articles
  */
 const clearNewsSearch = (state) => {
-    const articles = localStorage.getItem('articles') ? JSON.parse(localStorage.getItem('articles')) : [];
-    return Object.assign({}, state, { articles, });
+    return Object.assign({}, state, { articles: [] });
 };
 
 const loadNewsArticlesSuccess = (action, state) => {
     const articles = action.payload.articles;
-    localStorage.setItem('articles', JSON.stringify(articles));
     return Object.assign({}, state, { articles, allArticles: articles, });
 };
 
 const loadNewsArticlesFailure = (state) => {
-    const articles = localStorage.getItem('articles') ? JSON.parse(localStorage.getItem('articles')) : [];
-    return Object.assign({}, state, { articles, allArticles: articles, });
+    return Object.assign({}, state, { articles: [], allArticles: [], });
+};
+
+const loadNewsSourcesSuccess = (action, state) => {
+    const sources = action.payload.sources;
+    return Object.assign({}, state, { sources, });
+};
+
+const loadNewsSourcesFailure = (state) => {
+    return Object.assign({}, state, { sources: [], });
 };
 
 
-export default reducer;
+
+export default newsReducer;

@@ -16,6 +16,12 @@ app.get('/news/all', (req, res) => {
     });
 });
 
+app.get('/news/sources', (req, res) => {
+    fs.readFile(__dirname + '/server/api/mocks/news/sources/any.get.json', 'utf8', function (err,data) {
+        res.status(200).send(JSON.parse(data));
+    });
+});
+
 
 app.listen(3003);
 
