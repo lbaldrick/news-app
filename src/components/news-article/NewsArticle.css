@@ -1,13 +1,16 @@
 .news-article {
     display: flex;
+    float: left;
+    min-width: 56em;
 }
 
 .news-article_image {
-    margin: auto;
+    margin: auto 0 auto 0;
 }
 
 .news-article_image img {
     width: 13em;
+    height: 8em;
 }
 
 .news-article_details_link {
@@ -15,8 +18,8 @@
 }
 
 .news-article_details {
-    width: 33em;
     margin: 1em;
+    height: 10em;
 }
 
 
@@ -30,6 +33,10 @@
 }
 
 .news-article_details_description {
-    text-align: left;
+     text-align: left;
+ }
+
+.news-article_details_description p {
+    margin: 0.5em 0 0.5em 0;
 }
 

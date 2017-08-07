@@ -1,0 +1,8 @@
+.news-search-container {
+    width: 20em;
+    min-width: 20em;
+    margin-right: 1em;
+    max-height: 53em;
+    overflow-x: hidden;
+    overflow-y: auto;
+}

@@ -5,7 +5,7 @@ const List = (ListComponent) => ({ items }) => {
         return <ul className="list">
             {
                 items.map((item) =>{
-                    return <ListComponent { ...item } />
+                    return <ListComponent { ...item  } />
                 })
             }
         </ul>

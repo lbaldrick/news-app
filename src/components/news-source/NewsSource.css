@@ -1,0 +1,22 @@
+.news-source_details_input {
+    background: #c2c7c7;
+    padding: .25em;
+}
+
+
+.news-source_details_input label {
+    display: inline-block;
+    width: 13em;
+}
+
+.news-source_details_url,
+.news-source_details_category {
+   padding-bottom: 0.25em;
+}
+
+.news-source_details_input_button {
+    cursor: pointer;
+    width: 2em;
+    height: 1.5em;
+}
+

@@ -6,6 +6,8 @@ const INITIAL_STATE = {
     showLastWeek: false,
     allArticles: [],
     sources: [],
+    selectedSources: [],
+    openedSources: [],
 
 };
 
@@ -19,8 +21,10 @@ const newsReducer = (state = INITIAL_STATE, action) => {
             return loadNewsSourcesSuccess(action, state);
         case NEWS_ACTION_ENUM.LOAD_NEWS_SOURCES_FAILURE:
             return loadNewsSourcesFailure(action, state);
-        case NEWS_ACTION_ENUM.SEARCH_NEWS_ARTICLES:
-            return searchNewsArticles(action, state);
+        case NEWS_ACTION_ENUM.FILTER_NEWS_ARTICLES_SUCCESS:
+            return filterNewsArticlesSuccess(action, state);
+        case NEWS_ACTION_ENUM.FILTER_NEWS_ARTICLES_FAILURE:
+            return filterNewsArticlesFailure(action, state);
         case NEWS_ACTION_ENUM.CLEAR_NEWS_SEARCH:
             return clearNewsSearch(state);
         default:
@@ -31,12 +35,16 @@ const newsReducer = (state = INITIAL_STATE, action) => {
 /**
  * When searching we only want to search for articles that are not older thanj one week ago as this is part of criteria
  */
-const searchNewsArticles = (action, state) => {
-    const searchTerm = action.payload.searchTerm;
-    const articles = state.allArticles.filter(article => {
-        return (article.title.includes(searchTerm));
-    });
-    return Object.assign({}, state, { articles, searchTerm, });
+const filterNewsArticlesSuccess = (action, state) => {
+    const articles = action.payload.articles;
+    return Object.assign({}, state, { articles, allArticles: articles, })
+};
+
+/**
+ * When searching we only want to search for articles that are not older thanj one week ago as this is part of criteria
+ */
+const filterNewsArticlesFailure = (action, state) => {
+    return Object.assign({}, state, { articles: [], allArticles: [], })
 };
 
 /**

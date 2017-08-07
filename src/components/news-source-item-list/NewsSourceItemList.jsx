@@ -1,14 +1,24 @@
 import React from 'react';
 import './NewsSourceItemList.css';
-import List from '../list/List';
 import NewsSourceItem from '../news-source-item/NewsSourceItem';
 
-const ListComponent = List(NewsSourceItem);
-
-const NewsSourceItemList = ({ sources }) => {
+const NewsSourceItemList = ({ sources, onSourceSelected, onSourceExpanded, selectedSources, expandedSources }) => {
 
     return <div className="news-source-item-list">
-        <ListComponent items={ sources }/>
+        <ul>
+            {
+                sources.map((source) => {
+                    return <li>
+                        <NewsSourceItem item={ source }
+                                        onExpanded={ onSourceExpanded }
+                                        onSelected={ onSourceSelected }
+                                        isExpanded={ expandedSources.indexOf(source.id) > -1 }
+                                        isSelected={ selectedSources.indexOf(source.id) > -1 }
+                        />
+                    </li>
+                })
+            }
+        </ul>
     </div>
 };
 

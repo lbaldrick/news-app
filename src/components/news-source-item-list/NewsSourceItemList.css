@@ -1,0 +1,8 @@
+.news-source-item-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.news-source-item-list li {
+    padding-left: 0.5em;
+}

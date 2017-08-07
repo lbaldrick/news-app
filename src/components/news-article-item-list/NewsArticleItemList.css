@@ -7,9 +7,12 @@
     padding-left: 2em;
 }
 
+.news-article-item-list .list li:nth-child(even) {
+    background-color: #e9eff0;
+}
 
 .news-article-item-list .list li:nth-child(odd) {
-    background-color: #D6E2E8;
+    background-color: #f3f7f8;
 }
 
 

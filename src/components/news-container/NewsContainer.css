@@ -1,4 +1,7 @@
 .news-container {
+    max-height: 53em;
+    overflow-x: hidden;
+    overflow-y: auto;
     background: #ffffff;
-    width: 53em;
+    width: 90em;
 }
